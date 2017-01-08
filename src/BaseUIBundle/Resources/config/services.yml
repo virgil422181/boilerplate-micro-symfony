@@ -1,0 +1,4 @@
+services:
+#    base_ui.example:
+#        class: BaseUIBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

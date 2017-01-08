@@ -5,9 +5,6 @@ use Symfony\Component\Debug\Debug;
 
 umask(0000);
 
-$env   = 'dev';
-$debug = true;
-
 /** @var \Composer\Autoload\ClassLoader $loader */
 $loader = require __DIR__ . '/../app/autoload.php';
 
@@ -15,7 +12,7 @@ if ($debug) {
     Debug::enable();
 }
 
-$kernel = new AppKernel($env, $debug);
+$kernel = new AppKernel('dev', true);
 $request  = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();

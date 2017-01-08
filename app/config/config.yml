@@ -2,11 +2,30 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@AppBundle/Resources/config/services.yml" }
 
 framework:
-    secret: "secretkey"
+    secret: "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
     templating:
         engines: ["twig"]
+    form:            ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    default_locale:  "%locale%"
+    trusted_hosts:   ~
+    trusted_proxies: ~
+    session:
+        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id:  session.handler.native_file
+        save_path:   "%kernel.root_dir%/app/var/sessions/%kernel.environment%"
+    fragments:       ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+# Twig Configuration
+twig:
+    debug:            "%kernel.debug%"
+    strict_variables: "%kernel.debug%"
