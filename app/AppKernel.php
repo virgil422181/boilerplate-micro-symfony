@@ -14,7 +14,7 @@ class AppKernel extends Kernel
           new \AppBundle\AppBundle(),
         );
 
-        if (in_array($this->getEnvironment(), ['dev'], true)) {
+        if (in_array($this->getEnvironment(), ['dev','test'], true)) {
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
         }
@@ -24,7 +24,7 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config.yml');
+        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
     }
 
 }

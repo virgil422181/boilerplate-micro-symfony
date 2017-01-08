@@ -1,26 +1,30 @@
 {
-    "name": "basic/micro-symfony-boilerplate",
-    "authors": [
-        {
-            "name": "Virgil Mihai",
-            "email": "virgil.mihai@live.com"
-        }
-    ],
-    "autoload": {
-      "psr-4": { "": "src/" },
-      "classmap": [ "app/AppKernel.php"]
-    },
-    "require": {
-        "symfony/symfony": "^3.2",
-        "sensio/framework-extra-bundle": "^3.0"
-    },
-    "require-dev": {
-      "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.2"
-    },
-    "config": {
-      "platform": {
-        "php": "7.1.0"
-      }
+  "name": "basic/micro-symfony-boilerplate",
+  "authors": [
+    {
+      "name": "Virgil Mihai",
+      "email": "virgil.mihai@live.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    },
+    "classmap": [
+      "app/AppKernel.php"
+    ]
+  },
+  "require": {
+    "symfony/symfony": "^3.2",
+    "sensio/framework-extra-bundle": "^3.0"
+  },
+  "require-dev": {
+    "sensio/generator-bundle": "^3.0",
+    "symfony/phpunit-bridge": "^3.2"
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.0"
+    }
+  }
 }
