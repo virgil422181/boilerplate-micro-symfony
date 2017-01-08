@@ -1,0 +1,6 @@
+framework:
+    secret: "secretkey"
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+    templating:
+        engines: ["twig"]

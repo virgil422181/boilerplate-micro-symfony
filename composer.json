@@ -1,0 +1,13 @@
+{
+    "name": "virgil/learn-php",
+    "authors": [
+        {
+            "name": "Virgil Mihai",
+            "email": "virgil.mihai@live.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": "^3.2",
+        "sensio/framework-extra-bundle": "^3.0"
+    }
+}
